@@ -2,13 +2,12 @@ package Sistema;
 
 import java.io.PrintStream;
 import java.util.Scanner;
-
-
 import Classes.*;
 
 public class gerenciaBancos{
     
     public static Scanner scan = new Scanner(System.in);
+    
     protected static Bancos vetBancos[] = new Bancos[5];
     
     public static PrintStream listarBancos(){
@@ -24,10 +23,10 @@ public class gerenciaBancos{
         for(int i = 0; i < vetBancos.length; i++){
             str += String.format("%s", vetBancos[i].toString());
         }
-        return System.out.printf("%s", str);
+        return System.out.printf("\n%s", str);
     }
     
-    public static String criarAgencia(){
+    public static void criarAgencia(){
         int cont;
         int numero;
         int op;
@@ -65,10 +64,8 @@ public class gerenciaBancos{
                 default: System.out.println("Opcao nao disponivel.");
             }
         }
-
-        return String.format("\nAgencia criada com sucesso.");
+        System.out.format("\nAgencia criada com sucesso.");
     }
-
 }
     
 

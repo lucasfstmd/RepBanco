@@ -1,7 +1,6 @@
 package Sistema;
 
 import java.util.Scanner;
-
 import Classes.Agencias; 
 
 public class gerenciaAgencia {
@@ -9,8 +8,6 @@ public class gerenciaAgencia {
     public static Scanner scan = new Scanner(System.in);
 
     protected static Agencias vetAgencias[] = new Agencias[10]; 
-
-    
 
     public static void listarAgencias(){
 

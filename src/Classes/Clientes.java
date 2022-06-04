@@ -5,7 +5,6 @@ public class Clientes{
     
     private String nome;
     private String sobrenome;
-    //private int id = 0;
 
     public Clientes(String nome, String sobrenome) {
         this.nome = nome;
@@ -30,18 +29,9 @@ public class Clientes{
         this.sobrenome = sobrenome;
     }
 
-    /*public void setId(int id){
-        this.id = id;
-    }
-
-    public int getId(){
-        return id;
-    }*/
-
     @Override
     public String toString() {
-        return "Cliente = " + nome + " " + sobrenome;
+        return "Cliente = " + nome + " " + sobrenome + "\n";
     }
-
 }
 

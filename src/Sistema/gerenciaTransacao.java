@@ -7,10 +7,10 @@ public class gerenciaTransacao {
             if(gerenciaContas.vetContas[i] == null) break;
             if(numero == gerenciaContas.vetContas[i].getNumero()){
                 gerenciaContas.vetContas[i].setSaldo(+valor);
-                String.format("\nTransacao feita com sucesso.");
+                System.out.format("\nTransacao feita com sucesso.");
                 gerenciaContas.vetContas[i].setExtrato(String.format("\nDeposito no valor de: %.2f", valor));
             }else{
-                System.out.println("Conta nao encontrada");
+                System.out.println("\nConta nao encontrada");
             }
         }
     }
@@ -27,9 +27,11 @@ public class gerenciaTransacao {
                     }else{
                         gerenciaContas.vetContas[i].setSaldo(+valor);
                         gerenciaContas.vetContas[j].setSaldo(-valor);
-                        String.format("\nTransacao feita com sucesso."); 
-                        gerenciaContas.vetContas[i].setExtrato(String.format("\nRecebeu uma transferencia feita de %s no valor de: %.2f", gerenciaContas.vetContas[j].toString(), valor));
-                        gerenciaContas.vetContas[j].setExtrato(String.format("\nTransferiu para %s o valor de: %.2f",gerenciaContas.vetContas[i].toString(), valor)); 
+                        System.out.format("\nTransacao feita com sucesso."); 
+                        gerenciaContas.vetContas[i].setExtrato(String.format("\nRecebeu uma transferencia feita de %s no valor de: %.2f",
+                                                                gerenciaContas.vetContas[j].toString(), valor));
+                        gerenciaContas.vetContas[j].setExtrato(String.format("\nTransferiu para %s o valor de: %.2f\n",
+                                                                gerenciaContas.vetContas[i].toString(), valor)); 
                     }
                 }
             }

@@ -1,7 +1,7 @@
 package Classes;
 
-
 public class Agencias extends Bancos{
+    
     private int numero;
     Bancos banco;
     
@@ -28,6 +28,6 @@ public class Agencias extends Bancos{
 
     @Override
     public String toString(){
-        return String.format(":Agencia:\nNumero da agencia: %d\n%s", numero, super.toString());
+        return String.format(":Agencia:\nNumero da agencia: %d\n%s", this.numero, super.toString());
     }
 }

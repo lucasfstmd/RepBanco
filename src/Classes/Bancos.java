@@ -1,4 +1,5 @@
 package Classes;
+
 public class Bancos {
     
     private String nome;
@@ -6,7 +7,6 @@ public class Bancos {
     public Bancos(String nome){
         this.nome = nome;
     }
-
 
     public String getNome() {
         return nome;
@@ -18,7 +18,6 @@ public class Bancos {
 
     @Override
     public String toString(){
-        return String.format("\n:Banco:"
-                            +"\nNome: %s", nome);
+        return String.format(":Banco:\nNome: %s\n", nome);
     }
 }

@@ -26,8 +26,7 @@ public class gerenciaContas{
             System.out.println("\nDigite o sobrenome: ");
             sobrenome = scan.next();
 
-            System.out.println("Bancos Disponiveis.");
-            System.out.print(gerenciaBancos.listarBancos());
+            System.out.println("\nBancos Disponiveis.");
             System.out.print("\n1 - Santander."
                             +"\n2 - Banco do Brasil."
                             +"\n3 - Itau."
@@ -57,7 +56,7 @@ public class gerenciaContas{
                     banco = "Caixa Economica Federal";
                     break;
                 }
-                default: System.out.println("Opcao nao disponivel.");
+                default: System.out.println("\nOpcao nao disponivel.");
 
             }
 
@@ -69,12 +68,12 @@ public class gerenciaContas{
             
             agencia = new Agencias(banco, numeroCorreto);
 
-            System.out.println("Faca um deposito: ");
+            System.out.println("\nFaca um deposito: ");
             
             valorInicial = scan.nextDouble();
     
             vetContas[i] = new Contas(nome, sobrenome, agencia, valorInicial);
-            System.out.println("Cliente cadastrado com sucesso.");
+            System.out.println("\nCliente cadastrado com sucesso.");
         }
     }
 
@@ -100,11 +99,12 @@ public class gerenciaContas{
                vetContas[i] = vetContas[5];
            } 
         }
-        System.out.println("Conta apagada com sucesso.");
+        System.out.println("\nConta apagada com sucesso.");
     }
 
     public static void mostraExtrato(){
         listarContas();
+        
         String str = "";
         int numConta;
         System.out.println("Digite a conta para ver o Extrato.");

@@ -1,12 +1,12 @@
 package Classes;
 
 public class Contas extends Clientes {
-    Clientes pessoa;
-    private int numero;
-    Agencias agencia;
-    private double saldo;
     String extrato = " ";
-
+    Clientes pessoa;
+    Agencias agencia;
+    private int numero;
+    private double saldo;
+    
     public Contas(String nome, String sobrenome, Agencias agencia, double valorInicial){
         super(nome, sobrenome);
         this.agencia = agencia;
@@ -33,7 +33,7 @@ public class Contas extends Clientes {
     }
     
     public String getExtrato() {
-        return String.format("\nExtrato: %s",extrato);
+        return String.format("Extrato: %s",extrato);
     }
 
     public void setExtrato(String extrato) {
@@ -46,13 +46,14 @@ public class Contas extends Clientes {
                             +"\nNumero da conta: %d"
                             +"\n%s"
                             +"\n%s"
-                            +"\nSaldo: %.2f\n\n", this.numero, super.toString(), agencia.toString(), this.saldo);
+                            +"\nSaldo: %.2f\n", this.numero, super.toString(), agencia.toString(), this.saldo);
 
     }
 
+    @Override
     public int hashCode() {
         final int prime = 31;
-        int result = super.hashCode();
+        int result = 1;
         result = prime * result + ((agencia == null) ? 0 : agencia.hashCode());
         result = prime * result + ((extrato == null) ? 0 : extrato.hashCode());
         result = prime * result + numero;
@@ -63,6 +64,7 @@ public class Contas extends Clientes {
         return result;
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -91,6 +93,5 @@ public class Contas extends Clientes {
         if (Double.doubleToLongBits(saldo) != Double.doubleToLongBits(other.saldo))
             return false;
         return true;
-    }
-
+    }   
 }

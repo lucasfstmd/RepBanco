@@ -9,7 +9,8 @@ public class adminSistema{
     
     public static void menuPrinc(){
         int op;
-        System.out.format("\n:Banco para Jucelio Lindo:"
+        System.out.format("\n\t:Banco para Jucelio Lindo:"
+                    +"\n---------------------------------"
                     +"\n1 - Gerenciar Bancos"
                     +"\n2 - Gerenciar Contas"
                     +"\n3 - Operar Contas"
@@ -21,21 +22,22 @@ public class adminSistema{
             case 1: menuBancos();break;
             case 2: menuContas();break;
             case 3: menuOperacao();break;
-            default:System.out.println("Opcao nao disponivel.");
+            case 0: System.out.println("Programa encerrado.");break;
+            default:System.out.println("\nOpcao nao disponivel.");break;
         }
     }
     
     public static void menuBancos(){
         int op;
-        System.out.format("\n:Gerenciar Bancos:"
-                        +"\n-------------------------------"
+        System.out.format("\n\t:Gerenciar Bancos:"
+                        +"\n-----------------------------------"
                         +"\n1 - Listar Bancos."
                         +"\n2 - Listar Agencias"
                         +"\n3 - Adicionar nova Agencia."
                         +"\n4 - Excluir Agencia."
                         +"\n0 - Voltar ao menu anterior.");
         
-        System.out.print("\nSua opcao -> ");
+        System.out.print("\nSua opcao -> \n");
         op = scan.nextInt();
     
         switch(op){
@@ -50,8 +52,8 @@ public class adminSistema{
     
     public static void menuContas(){
         int op;
-        System.out.format("\n:Gerenciar Contas:"
-                        +"\n---------------------"
+        System.out.format("\n\t:Gerenciar Contas:"
+                        +"\n------------------------------------------"
                         +"\n1 - Listar Contas."
                         +"\n2 - Adicionar nova Conta (novo cliente)."
                         +"\n3 - Excluir Contas."
@@ -73,7 +75,7 @@ public class adminSistema{
         int op;
         int numContaA, numContaB;
         double valor;
-        System.out.format("\n:Menu Opercao:"
+        System.out.format("\n\n\t:Menu Opercao:"
                         +"\n---------------------------------"
                         +"\n1 - para Depositar."
                         +"\n2 - para Trasferir."
@@ -118,6 +120,3 @@ public class adminSistema{
         }
     }
 }
-
-
-
